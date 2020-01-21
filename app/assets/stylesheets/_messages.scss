@@ -23,7 +23,6 @@
       justify-content: space-between;
       font-weight: bold;
       width: 100%;
-      // list-style: none;;
       color: white;
       text-decoration: none;
 
@@ -76,8 +75,6 @@
     
 
       &__box{
-        // padding: 0 40px;
-        // display: flex;
         margin-top: 35px;
 
         &__current{
@@ -97,7 +94,6 @@
         margin-top: 30px;
         color: #38aef0;
         border: solid 1px #38aef0;
-        // position: absolute;
         right: 40px;
         
       &__Edit{
@@ -153,7 +149,6 @@
     form{
       display: flex;
       .input-box{
-        // display: flex;
         width: 100%;
         position: relative;
       
