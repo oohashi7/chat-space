@@ -107,7 +107,6 @@
     &__message {
     height: calc(100Vh - 190px);
     padding: 46px 40px;
-    background-color:gray ;
     
       &__cargo{
       background-color:whitesmoke;
@@ -116,7 +115,7 @@
         &__info{
           display: flex;
           margin-bottom: 10px;
-          background-color: crimson;
+          
 
             &__talker{
             color: #434a54;
@@ -125,7 +124,6 @@
             }
           
             &__date{
-            background-color: yellowgreen;
             color: #999999;
             font-size: 12px;
             margin-left: 10px;
