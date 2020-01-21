@@ -1,0 +1,47 @@
+.main
+  .main__chat
+    .main__chat__box
+      %h2.main__chat__box__current
+        oohashi
+      %p.main__chat__box__list
+        membar
+    .main__chat__menu1
+      =link_to "＃", class: "main__chat__menu1__Edit" do 
+        Edit
+
+  .main__message
+    .main__message__cargo
+      .main__message__cargo__info
+        %p.main__message__cargo__info__talker
+          menter
+        %p.main__message__cargo__info__date
+          2020/01/20(Mon) 20:04:48
+      %p.main__message__cargo__text
+        111
+
+    .main__message__cargo
+      .main__message__cargo__info
+        %p.main__message__cargo__info__talker
+          menter
+        %p.main__message__cargo__info__date
+          2020/01/20(Mon) 20:04:48
+      %p.main__message__cargo__text
+        222
+
+    .main__message__cargo
+      .main__message__cargo__info
+        %p.main__message__cargo__info__talker
+          menter
+        %p.main__message__cargo__info__date
+          2020/01/20(Mon) 20:04:48
+      %p.main__message__cargo__text
+        333
+
+  .main__form
+    %form.new_message
+      .input-box
+        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
+        %label{class: "input-box__image"}
+          = icon('fas', 'image')
+          %input{type: "file", class: "input-box__image__file"}
+      %input{type: "submit", class: "submit-btn"}
