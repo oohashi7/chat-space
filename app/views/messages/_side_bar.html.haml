@@ -5,15 +5,16 @@
       %h3.side__up__box__user
         = current_user.name
       %ul.side__up__box__menu
-        =link_to "＃", class: "side__up__box__menu" do
+        =link_to new_group_path, class: "side__up__box__menu" do
           = icon('fa', 'edit')
         = link_to edit_user_path(current_user) do
           = icon('fas', 'cog', class: 'icon')
 
-      
-    
   .side__down
-    %p.side__down__name
-      aaa
-    %p.side__down__message
-      まだメッセージはありません
+    - current_user.groups.each do |group|
+      .group
+        = link_to "#" do
+          .group__name
+            = group.name
+          .group__message
+            メッセージはまだありません。
