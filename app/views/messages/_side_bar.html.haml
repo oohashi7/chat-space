@@ -7,14 +7,14 @@
       %ul.side__up__box__menu
         =link_to new_group_path, class: "side__up__box__menu" do
           = icon('fa', 'edit')
-        = link_to edit_user_path(current_user) do
+        = link_to edit_user_path(current_user) ,class: "side__up__box__menu" do
           = icon('fas', 'cog', class: 'icon')
 
   .side__down
     - current_user.groups.each do |group|
       .group
-        = link_to "#" do
+        = link_to group_messages_path(group) ,class: "side__down__message" do
           .group__name
             = group.name
           .group__message
-            メッセージはまだありません。
+            = group.show_last_message
