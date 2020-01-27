@@ -9,6 +9,7 @@
     height:100Vh;
     background-color: #253141;
     float: left;
+    color: white;
 
     &__up {
     background-color:#253141 ;
@@ -47,6 +48,7 @@
     height : calc(100Vh - 100px);
     background-color:#2f3e51 ;
     padding: 20px 20px 0;
+    color: white;
     
       &__name{
         font-size: 15px;
@@ -55,7 +57,7 @@
       }
      
       &__message{
-        font-size: 11px;
+        font-size: 15px;
         color: white;
       }
     }

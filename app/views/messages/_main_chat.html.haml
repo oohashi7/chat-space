@@ -1,47 +1,27 @@
 .main
   .main__chat
     .main__chat__box
-      %h2.main__chat__box__current
-        oohashi
-      %p.main__chat__box__list
-        membar
+      .main__chat__box__current
+        %h2 #{@group.name}
+      .main__chat__box__list
+        Members:
+        - @group.users.each do |user|
+          %span.chat-header__user #{user.name}
     .main__chat__menu1
-      =link_to "＃", class: "main__chat__menu1__Edit" do 
+      = link_to edit_group_path(@group), class: "main__chat__menu1__Edit" do
         Edit
 
+
   .main__message
-    .main__message__cargo
-      .main__message__cargo__info
-        %p.main__message__cargo__info__talker
-          menter
-        %p.main__message__cargo__info__date
-          2020/01/20(Mon) 20:04:48
-      %p.main__message__cargo__text
-        111
-
-    .main__message__cargo
-      .main__message__cargo__info
-        %p.main__message__cargo__info__talker
-          menter
-        %p.main__message__cargo__info__date
-          2020/01/20(Mon) 20:04:48
-      %p.main__message__cargo__text
-        222
-
-    .main__message__cargo
-      .main__message__cargo__info
-        %p.main__message__cargo__info__talker
-          menter
-        %p.main__message__cargo__info__date
-          2020/01/20(Mon) 20:04:48
-      %p.main__message__cargo__text
-        333
+    = render @messages
 
   .main__form
-    %form.new_message
-      .input-box
-        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
-        %label{class: "input-box__image"}
-          = icon('fas', 'image')
-          %input{type: "file", class: "input-box__image__file"}
-      %input{type: "submit", class: "submit-btn"}
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
+      
