@@ -2,7 +2,7 @@
   .main__chat
     .main__chat__box
       .main__chat__box__current
-        %h2 #{@group.name}
+        #{@group.name}
       .main__chat__box__list
         Members:
         - @group.users.each do |user|
@@ -16,12 +16,11 @@
     = render @messages
 
   .main__form
-    .form
-      = form_for [@group, @message] do |f|
-        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-        .form__mask
-          = f.label :image, class: 'form__mask__image' do
-            = icon('fas', 'image', class: 'icon')
-            = f.file_field :image, class: 'hidden'
-        = f.submit 'Send', class: 'form__submit'
+    = form_for [@group, @message] do |f|
+      .main__form__box
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'      
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
       
