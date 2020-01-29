@@ -12,20 +12,20 @@
     color: white;
 
     &__up {
-    background-color:#253141 ;
-    height : 100px;
-    display: flex;
-    align-items: center;
-    padding:0 20px ;
-
-      &__box{
+      background-color:#253141 ;
+      height : 100px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      font-weight: bold;
-      width: 100%;
-      color: white;
-      text-decoration: none;
+      padding:0 20px ;
+
+      &__box{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: bold;
+        width: 100%;
+        color: white;
+        text-decoration: none;
 
         &__user{
           list-style: none;
@@ -45,10 +45,10 @@
 
 
     &__down {
-    height : calc(100Vh - 100px);
-    background-color:#2f3e51 ;
-    padding: 20px 20px 0;
-    color: white;
+      height : calc(100Vh - 100px);
+      background-color:#2f3e51 ;
+      padding: 20px 20px 0;
+      color: white;
     
       &__name{
         font-size: 15px;
@@ -69,23 +69,21 @@
     float: left;
  
     &__chat{
-    height : 100px;
-    padding: 0 40px;
-    background-color: #ffffff ;
-    display: flex;
-    justify-content:space-between;
-    
+      height : 100px;
+      padding: 0 40px;
+      background-color: #ffffff ;
+      display: flex;
+      justify-content:space-between;
 
       &__box{
         margin-top: 35px;
-
         &__current{
           font-size: 15;
           margin-bottom: 15;
         }
-   
         &__list{
-          font-size: 15;
+          font-size: 12;
+          color:#999999;
         }
       }
 
@@ -103,33 +101,32 @@
         text-decoration: none;
       }
       }
-
     }
 
     &__message {
-    height: calc(100Vh - 190px);
-    padding: 46px 40px;
+      height: calc(100Vh - 190px);
+      padding: 46px 40px;
+      background-color: #fafafa;
+      overflow: auto;
     
       &__cargo{
-      background-color:whitesmoke;
-      padding-bottom: 40px;
+        padding-bottom: 40px;
 
         &__info{
           display: flex;
           margin-bottom: 10px;
           
-
-            &__talker{
+          &__talker{
             color: #434a54;
             font-size: 16px;
             font-weight: bold;
-            }
+          }
           
-            &__date{
+          &__date{
             color: #999999;
             font-size: 12px;
             margin-left: 10px;
-            }
+          }
         }
 
         &__text{
@@ -137,42 +134,42 @@
           font-size: 14px;
           margin-bottom: 10px;
         }
-
       }
     }
 
     &__form {
-    height : 90px;
-    padding: 20px 40px;
-    background-color: #ddd;
+      height : 90px;
+      padding: 20px 40px;
+      background-color: #ddd;
 
-    form{
-      display: flex;
-      .input-box{
-        width: 100%;
-        position: relative;
-      
-        &__text{
-          height: 50px;
+
+      .new_message {
+        display: flex;
+        .main__form__box{
           width: 100%;
-          color: #434a54;
-          border-style: none;
-          padding: 0 40px 0 10px;
-        }
+          position: relative;
+      
+          .form__message{
+            height: 50px;
+            width: 100%;
+            padding: 0 40px 0 10px;
+            color: #434a54;
+            border-style: none;
+          }
 
-        &__image{
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        cursor: pointer;
-        font-size:  1.3rem;
-
-          &__file{
+          .form__mask__image{
+            font-size:  1.3rem;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+          
+          .hidden{
             display: none;
           }
         }
       }
-      .submit-btn{
+      .form__submit{
         width: 100px;
         height: 50px;
         padding: 0 30px;
