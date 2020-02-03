@@ -105,5 +105,5 @@ var reloadMessages = function() {
     $('.main__message').animate({ scrollTop: $('.main__message')[0].scrollHeight});
   })
 }
-setInterval(reloadMessages, 1000);
+setInterval(reloadMessages, 5000);
 });
